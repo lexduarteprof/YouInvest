@@ -1,0 +1,33 @@
+    <!--início do card-->
+        <div class="card mb-3 cardbgcolor" style="max-width: 100%;">
+            <div class="row g-0">
+              <div class="col-md-3">
+                <img src="assets/{{fundoItem.logoURL}}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-9">
+                <div class="card-body row">
+                  <h5 class="card-title">{{fundoItem.nome}}</h5>
+                  <div class="col-6">  
+                        <p class="card-text" style="font-size: 14px;">{{fundoItem.descricao}}</p>
+                  </div>
+                  <div class="col-6">  
+                    <p class="fp1">Perfil: <span class="fp2">{{fundoItem.perfilInvestidor}}</span> </p>
+                    <p class="fp1">Rentabilidade:</p>
+                    <ul class="fp2" style="font-size:14px;">
+                        <li>no dia: {{fundoItem.rentDia | percent: '1.2-2'}}</li>
+                        <li>no mês: {{fundoItem.rentMes | percent: '1.2-2'}}</li>
+                        <li>no ano: {{fundoItem.rentAno | percent: '1.2-2'}}</li>
+                    </ul>
+                    <p class="fp1">Índice de Sharp: <span class="fp2">{{fundoItem.ISharp}}</span> </p>
+                    <p class="fp1">Índice de Treynor: <span class="fp2">{{fundoItem.ITreynor}}</span> </p>
+                    <p class="fp1">Volatilidade diária: <span class="fp2">{{fundoItem.volDia | percent: '1.2-2'}}</span></p>
+                </div>
+                </div>
+                <div class="card-body a-flex-end">
+                    <button class="btn btn-primary btn-sm">Investir</button>
+                    <button class="btn btn-info btn-sm">Detalhes</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+
